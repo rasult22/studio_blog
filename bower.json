@@ -1,0 +1,24 @@
+{
+  "name": "wordpress-blog",
+  "description": "Wordpress Blog theme",
+  "main": "index.js",
+  "authors": [
+    "rasult22 <warrior.006@inbox.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/src/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^v4.0.0-beta",
+    "font-awesome": "^5.7.1"
+  }
+}

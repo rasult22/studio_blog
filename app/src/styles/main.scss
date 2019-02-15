@@ -1,0 +1,23 @@
+@import '../bower_components/bootstrap/scss/bootstrap-grid.scss';
+@import '../bower_components/bootstrap/scss/bootstrap-reboot.scss';
+@import './fonts.scss';
+@import './variables.scss';
+@import './header.scss'; 
+
+img{
+  max-width: 100%;
+}
+html,body{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style-type: none;
+}
+
+body{
+  color: $main-color;
+}
+.fa{
+  color:#fff;
+}
