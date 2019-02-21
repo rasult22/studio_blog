@@ -49,7 +49,6 @@
             width: 100%;
             height: 580px;
             position: relative;
-            background-color: aqua;
             .banner{
                 position: absolute;
                 max-height: 580px;
@@ -64,7 +63,7 @@
                 right: 150px;
                 img:hover{
                     cursor: pointer;
-                    background-image: url(../../build/imgs/2.png);
+                    background-image: url(../img/2.png);
                 }
 
             }
