@@ -1,1 +1,109 @@
-/* Стили для хедера */
+
+.header{
+    width: $width;
+    height: 345px;
+    background-color: $darkColor;
+    .wrapper{
+        margin-right: 55px;
+        margin-left: 55px;
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            a{
+                color: $whiteColor;
+                font-size: 25px;
+                display: inline-block;
+                padding: 20px;
+                padding-right: 22px;
+                border-left: $border;
+                border-right: $border;
+            }
+            
+            img{
+                max-width: 151px;
+                max-height: 16px;
+                padding: 20px;
+                box-sizing: content-box;
+                display: block;
+                margin-left: 290px;
+            }
+
+            .share{
+                a{
+                    color: $whiteColor;
+                    font-size: 20px;
+                    border-left: $border;
+                    border-right: none;
+                    padding: 27px;
+                    padding-top: 21px;
+                    padding-right: 22px;
+                }
+                a:last-of-type{
+                    border-right: $border;
+                }
+            }
+        }
+        .bannerBlock{
+            width: 100%;
+            height: 580px;
+            position: relative;
+            background-color: aqua;
+            .banner{
+                position: absolute;
+                max-height: 580px;
+                z-index: 2;
+            }
+    
+            .checkboxx{
+                max-width: 10px;
+                position: absolute;
+                z-index: 5;
+                top: 268px;
+                right: 150px;
+                img:hover{
+                    cursor: pointer;
+                    background-image: url(../../build/imgs/2.png);
+                }
+
+            }
+            .feature{
+                z-index: 5;
+                display: inline-block;
+                font-family: "Hind - Semibold";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                text-transform: uppercase;
+                letter-spacing: 2.8px;
+                color: $whiteColor;
+                position: absolute;
+                top: 288px;
+                right: 0px;
+                transform-origin: 50% 50%;
+                transform: rotate(-90deg);
+                
+            }
+            .feature::after{
+                font-family: FontAwesome;
+                padding-left: 10px;
+            }
+
+            .feature::after{
+                content: "\f061"; 
+            }
+
+            .feature::before{
+                padding-right: 10px;
+                font-family: FontAwesome;
+            }
+
+            .feature::before{
+                content: "\f060";
+            }
+        
+        }
+
+    }
+}
