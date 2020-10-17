@@ -1,6 +1,5 @@
-# studio_blog
-our studio blog 
-!!!!!!! PROJECT IS NO LONGER AVAILABLE !!!!
+# Недостроенный Сайт распавшейся команды "Succulent Dev" 
+
 
 # Начальные настройки
 Клонируйте репозиторий
