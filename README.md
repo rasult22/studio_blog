@@ -1,5 +1,6 @@
 # studio_blog
-our studio blog
+our studio blog 
+!!!!!!! PROJECT IS NO LONGER AVAILABLE !!!!
 
 # Начальные настройки
 Клонируйте репозиторий
