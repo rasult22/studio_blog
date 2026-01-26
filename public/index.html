@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дурак - Карточная игра</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Экран входа -->
+    <div id="lobby" class="screen active">
+        <div class="lobby-container">
+            <h1 class="game-title">🃏 Дурак</h1>
+            <p class="subtitle">Классическая карточная игра онлайн</p>
+
+            <div class="input-group">
+                <input type="text" id="playerName" placeholder="Введите ваше имя" maxlength="20">
+            </div>
+
+            <div class="button-group">
+                <button id="createGameBtn" class="btn btn-primary">Создать игру</button>
+                <div class="divider">или</div>
+                <div class="join-group">
+                    <input type="text" id="gameCode" placeholder="Код игры" maxlength="6">
+                    <button id="joinGameBtn" class="btn btn-secondary">Войти</button>
+                </div>
+            </div>
+
+            <div class="rules">
+                <h3>Правила игры</h3>
+                <ul>
+                    <li>Колода из 36 карт (от 6 до туза)</li>
+                    <li>Каждому раздаётся по 6 карт</li>
+                    <li>Козырь определяется последней картой в колоде</li>
+                    <li>Атакующий кладёт карту, защитник должен побить</li>
+                    <li>Можно подкидывать карты того же достоинства</li>
+                    <li>Проигрывает тот, у кого остались карты в конце</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Комната ожидания -->
+    <div id="waiting-room" class="screen">
+        <div class="waiting-container">
+            <h2>Комната ожидания</h2>
+            <div class="game-code-display">
+                <span>Код игры:</span>
+                <strong id="roomCode"></strong>
+                <button id="copyCodeBtn" class="btn-icon" title="Копировать">📋</button>
+            </div>
+
+            <div class="players-list">
+                <h3>Игроки (<span id="playerCount">0</span>/6)</h3>
+                <ul id="playersList"></ul>
+            </div>
+
+            <div class="waiting-actions">
+                <button id="startGameBtn" class="btn btn-primary" disabled>Начать игру</button>
+                <button id="leaveRoomBtn" class="btn btn-danger">Покинуть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Игровой стол -->
+    <div id="game" class="screen">
+        <div class="game-container">
+            <!-- Информация об игре -->
+            <div class="game-info">
+                <div class="trump-display">
+                    <span>Козырь:</span>
+                    <div id="trumpCard" class="mini-card"></div>
+                </div>
+                <div class="deck-info">
+                    <div class="deck-pile">🂠</div>
+                    <span id="deckCount">0</span>
+                </div>
+                <div class="game-status" id="gameStatus"></div>
+            </div>
+
+            <!-- Противники (верх) -->
+            <div class="opponents-area" id="opponentsArea"></div>
+
+            <!-- Игровой стол -->
+            <div class="table-area">
+                <div class="table" id="table">
+                    <div class="table-cards" id="tableCards"></div>
+                </div>
+            </div>
+
+            <!-- Действия игрока -->
+            <div class="player-actions">
+                <button id="takeBtn" class="btn btn-danger" style="display:none;">Взять</button>
+                <button id="passBtn" class="btn btn-success" style="display:none;">Бито</button>
+            </div>
+
+            <!-- Карты игрока (низ) -->
+            <div class="player-hand" id="playerHand"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно результата -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <h2 id="resultTitle"></h2>
+            <p id="resultMessage"></p>
+            <button id="playAgainBtn" class="btn btn-primary">Играть снова</button>
+        </div>
+    </div>
+
+    <!-- Уведомления -->
+    <div id="notifications"></div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
